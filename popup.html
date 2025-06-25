@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>LeetCode Reflect</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      width: 600px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+    }
+    #output, #feedback {
+      margin-top: 10px;
+      white-space: pre-wrap;
+      max-height: 250px;
+      overflow-y: auto;
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 8px;
+      padding: 8px 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>💡 LeetCode Reflect</h2>
+<div style="display: flex; align-items: center; gap: 8px;">
+  <button id="captureBtn">📥 Capture Code</button>
+  <button id="pushBtn">🚀 Push to GitHub</button>
+  <select id="langSelect">
+    <option value="cpp">C++</option>
+    <option value="python">Python</option>
+    <option value="java">Java</option>
+    <option value="javascript">JavaScript</option>
+  </select>
+</div>
+
+    
+  <div id="output"></div>
+  <div id="feedback"></div>
+  <label for="tagInput"><b>📝 Confirm Tags:</b></label>
+  <input type="text" id="tagInput" placeholder="e.g. HashMap, Math, Greedy" />
+  <label for="reflectionInput"><b> 🖋️ Reflection:</b></label>
+  <textarea id="reflectionInput" placeholder="What did you learn or struggle with?" rows="3" style="width: 100%; padding: 8px; margin-top: 6px; border-radius: 6px; border: 1px solid #ccc;"></textarea>
+
+  
+
+  <div id="github-settings">
+    <h4>🔐 GitHub Token</h4>
+    <input type="password" id="githubToken" placeholder="Enter your GitHub token" />
+    <button id="saveToken">Save Token</button>
+  </div>
+
+  <button id="reviewBtn">📊 Weekly Review</button>
+
+
+  <script defer src="popup.js"></script>
+
+</body>
+</html>

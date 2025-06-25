@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>📊 Weekly Review - LeetCode Reflect</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      color: #333;
+    }
+
+    h2 {
+      color: #2563eb;
+      margin-bottom: 20px;
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    label {
+      font-weight: 500;
+    }
+
+    select, input[type="number"] {
+      padding: 6px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 8px 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #progressContainer {
+      max-width: 400px;
+      margin: 0 auto 40px auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      color: #1f2937;
+    }
+
+    .card p {
+      margin: 4px 0;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>🧾 Weekly Reflection & Progress</h2>
+
+  <div class="filter-bar">
+    <div>
+      <label for="topicFilter">Filter by Topic:</label>
+      <select id="topicFilter">
+        <option value="all">All</option>
+        <!-- Add options dynamically via JS -->
+      </select>
+    </div>
+
+    <div>
+      <label for="dateFilter">Only show past N days:</label>
+      <input type="number" id="dateFilter" placeholder="7" min="1" />
+    </div>
+
+    <div>
+      <button id="applyFilter">Apply</button>
+    </div>
+  </div>
+
+  <div id="progressContainer">
+    <canvas id="progressChart"></canvas>
+  </div>
+
+ 
+  <div id="problemCards"></div>
+
+  <script src="review.js"></script>
+</body>
+</html>
